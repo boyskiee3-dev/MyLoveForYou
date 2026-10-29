@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&family=Playfair+Display:wght@600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: 'DM Sans', sans-serif;
+    color: #704354;
+    background: linear-gradient(135deg, #fff5f9, #fbd9e7, #fff0f6);
+    min-height: 100vh;
+}
+
+h1, h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: #a3446b;
+}
+
+p {
+    line-height: 1.7;
+}
+
+button {
+    border: none;
+    border-radius: 30px;
+    padding: 13px 22px;
+    background: #d9578c;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #bd3c75;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px #d9578c35;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Welcome and login screens */
+
+.screen {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+}
+
+.card {
+    width: 100%;
+    max-width: 430px;
+    padding: 40px 32px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid white;
+    border-radius: 28px;
+    box-shadow: 0 18px 55px #ba5d8424;
+    text-align: center;
+    animation: appear 0.8s ease;
+}
+
+.heart {
+    font-size: 55px;
+    color: #d9578c;
+    animation: heartbeat 1.5s infinite;
+    
+.heart {
+    pointer-events: none;
+    z-index: 9999;
+}
+
+}
+
+.card h1 {
+    font-size: 35px;
+    margin: 12px 0;
+}
+
+.card p {
+    color: #9d7585;
+}
+
+/* Login form */
+
+label {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 15px 0 7px;
+}
+
+input[type="text"],
+input[type="password"],
+textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #f0c6d7;
+    border-radius: 12px;
+    background: #fffafd;
+    color: #704354;
+    font-family: inherit;
+    font-size: 14px;
+    outline: none;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #d9578c;
+    box-shadow: 0 0 0 3px #fce3ed;
+}
+
+#loginForm button {
+    width: 100%;
+    margin-top: 22px;
+}
+
+#loginMessage,
+#letterMessage {
+    color: #d9578c;
+    font-size: 14px;
+}
+
+/* Main website heading */
+
+.hero {
+    text-align: center;
+    padding: 65px 20px 35px;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 7vw, 65px);
+    margin: 15px 0;
+}
+
+.hero p {
+    color: #9d7585;
+}
+
+/* Hover dropdown menu */
+
+.menu {
+    display: inline-block;
+    position: relative;
+    margin-top: 15px;
+}
+
+.menu-button {
+    background: white;
+    color: #d9578c;
+    border: 1px solid #f5c7d9;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%);
+    min-width: 190px;
+    background: white;
+    padding: 8px;
+    border-radius: 16px;
+    box-shadow: 0 15px 35px #ba5d8424;
+    z-index: 10;
+    text-align: left;
+}
+
+.menu:hover .dropdown,
+.menu:focus-within .dropdown {
+    display: block;
+}
+
+.dropdown a {
+    display: block;
+    text-decoration: none;
+    color: #704354;
+    padding: 12px 14px;
+    border-radius: 10px;
+}
+
+.dropdown a:hover {
+    background: #fff0f6;
+    color: #d9578c;
+}
+
+/* White content boxes */
+
+.content-card {
+    width: min(900px, calc(100% - 32px));
+    margin: 25px auto;
+    padding: 35px;
+    background: rgba(255, 255, 255, 0.95);
+    border: 1px solid white;
+    border-radius: 25px;
+    box-shadow: 0 18px 55px #ba5d8418;
+    scroll-margin-top: 20px;
+}
+
+.content-card h2 {
+    margin-top: 0;
+}
+
+.content-card p {
+    color: #9d7585;
+}
+
+/* Upload buttons and inputs */
+
+input[type="file"] {
+    display: block;
+    max-width: 100%;
+    margin: 18px 0;
+    color: #704354;
+}
+
+textarea {
+    display: block;
+    resize: vertical;
+    min-height: 170px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+/* Pictures and videos */
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin-top: 20px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 7px 20px #70435414;
+}
+
+.gallery video {
+    width: 100%;
+    border-radius: 16px;
+    background: #271923;
+}
+
+/* YouTube video */
+
+.youtube-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fff0f6;
+}
+
+.youtube-container iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 35px 15px 45px;
+    color: #a56680;
+}
+
+/* Animations */
+
+@keyframes heartbeat {
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(18px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile design */
+
+@media (max-width: 600px) {
+    .card {
+        padding: 30px 22px;
+    }
+
+    .card h1 {
+        font-size: 30px;
+    }
+
+    .content-card {
+        padding: 23px;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* FLOATING HEARTS */
+.heart {
+    position: fixed;
+    bottom: -30px;
+    color: #ff69b4;
+    font-size: 24px;
+    animation: floatUp 6s linear forwards;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.youtube-container {
+    width: 100%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    margin: 20px auto;
+}
+
+.youtube-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}

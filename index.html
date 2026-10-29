@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Love for You 💗</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="welcomeScreen" class="screen">
+        <div class="card">
+            <div class="heart">♥</div>
+            <h1>My Love for You</h1>
+            <p>A little place made with love, just for you. 💗</p>
+            
+<button type="button" onclick="openHeart()">
+    Click to Open My Heart ♡
+</button>
+
+        </div>
+    </section>
+
+    <section id="loginScreen" class="screen" hidden>
+        <div class="card">
+            <div class="heart">♥</div>
+            <h1>Welcome, My Love 💕</h1>
+            <p>Enter the password to open your surprise.</p>
+
+            <form id="loginForm">
+                <label for="username">Username</label>
+                <input type="text" id="username"
+                       placeholder="Enter username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password"
+                       placeholder="Enter password" required>
+
+                <button type="submit">Open My Heart ♡</button>
+                <p id="loginMessage"></p>
+            </form>
+        </div>
+    </section>
+
+    <main id="mainSite" hidden>
+
+        <header class="hero">
+            <h1>My Love for You ♥</h1>
+            <p>Every little memory with you means everything to me. 💗</p>
+
+            <div class="menu">
+                <button class="menu-button">Our Memories ▾</button>
+
+                <div class="dropdown">
+                    <a href="#pictures">📸 Pictures</a>
+                    <a href="#letter">💌 Love Letter</a>
+                    <a href="#videos">🎥 Videos</a>
+                    <a href="#youtube">🎵 Our Song</a>
+                </div>
+            </div>
+        </header>
+
+        <section class="content-card">
+            <h2>🎵 Our Background Music</h2>
+           
+            
+<div class="music-box">
+    <p>🎵 Our Special Song 💗</p>
+
+    <audio id="backgroundMusic" controls loop>
+        <source src="c:\Users\dell\Downloads\Coldplay - Yellow (Official Video).mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+</div>
+
+        </section>
+        
+
+
+
+        <section id="pictures" class="content-card">
+            <h2>📸 Our Pictures</h2>
+            <p>Choose your favorite pictures together. 💗</p>
+            <input type="file" id="pictureUpload"
+                   accept="image/*" multiple>
+            <div id="pictureGallery" class="gallery">
+                
+<div id="pictureGallery" class="gallery">
+    <img src="pictures/5047e231-e99c-4a37-9bca-a2367977eca6.jfif" alt="Our first memory">
+    <img src="pictures/66d7b63f-d782-4cb7-8b30-5b63158918e5.jfif" alt="My favorite picture">
+    <img src="pictures/77575937-cd54-4462-90fe-f2bf020338f1.jfif" alt="Our special moment">
+</div>
+
+            </div>
+        </section>
+
+        <section id="letter" class="content-card">
+            <h2>💌 A Love Letter for You</h2>
+
+            <textarea id="loveLetter"
+                      placeholder="My love, I just want you to know..."
+                      rows="8"></textarea>
+
+            <button onclick="saveLetter()">Save Love Letter ♡</button>
+            <p id="letterMessage"></p>
+        </section>
+
+        <section id="videos" class="content-card">
+            <h2>🎥 Our Videos</h2>
+            <p>Choose videos from your computer.</p>
+
+            <input type="file" id="videoUpload"
+                   accept="video/*" multiple>
+
+            <div id="videoGallery" class="gallery"></div>
+            
+<div id="videoGallery" class="gallery">
+    <video controls preload="metadata">
+        <source src="pictures/videos/38a81848-f0d6-468b-94e8-3e79f59da5c6.mp4" type="video/mp4">
+        Your browser does not support this video.
+    </video>
+
+    <video controls preload="metadata">
+        <source src="pictures/videos/89d099da-3cc6-4020-9d96-09a5c7977b0c.mp4" type="video/mp4">
+        Your browser does not support this video.
+    </video>
+</div>
+
+        </section>
+
+        <section id="youtube" class="content-card">
+            <h2>🎵 Our Favorite YouTube Video</h2>
+
+<div class="youtube-container">
+    <iframe
+        src="https://www.youtube.com/embed/P87JgCE7bxg"
+        title="Our Special Video 💗"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen>
+    </iframe>
+</div>
+
+
+        </section>
+
+        <footer>Made with all my love, just for you. 💗</footer>
+
+    </main>
+
+   
+    <script src="script.js"></script>
+</body>
+</html>
